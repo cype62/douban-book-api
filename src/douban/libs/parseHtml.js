@@ -71,7 +71,9 @@ function getBookIntro($) {
 }
 
 function getAuthorIntro($) {
-  return $('div.intro')[1]?.children.filter(ele => ele.name === 'p').map(pEle => pEle.children[0]?.data || '').join('\n') || '';
+  const l= $('div.intro').length;
+  const a= $('div.intro')[l-1]?.children.filter(ele => ele.name === 'p').map(pEle => pEle.children[0]?.data || '').join('\n') || '';
+  return a;
 }
 
 function getCatalog($, id) {

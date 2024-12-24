@@ -2,8 +2,7 @@
 # Author: acdzh <acdzh@outlook.com>
 FROM node:alpine
 
-RUN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple 
-RUN pip config set install.trusted-host mirrors.aliyun.com
+RUN npm config set registry https://registry.npmmirror.com/
 
 
 WORKDIR /data/app
